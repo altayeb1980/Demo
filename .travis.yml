@@ -15,6 +15,7 @@ deploy:
   api_key: $GITHUB_TOKEN
   file: /home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar
   skip_cleanup: true
+  overwrite: true
   on:
     all_branches: true
 
