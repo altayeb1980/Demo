@@ -4,42 +4,39 @@ jdk: oraclejdk8
 install: true
 script: mvn install
 
-before_deploy:
+#before_deploy:
       # Set up git user name and tag this commit
-      - git config --local user.name "Altayeb Saadeh"
-      - git config --local user.email "loay.saada@gmail.com"
-      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+ #     - git config --local user.name "Altayeb Saadeh"
+  #    - git config --local user.email "loay.saada@gmail.com"
+   #   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
-deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file: /home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar
-  skip_cleanup: true
-  overwrite: true
-  on:
-    all_branches: true
+#deploy:
+ # provider: releases
+  #api_key: $GITHUB_TOKEN
+  #file: /home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar
+  #skip_cleanup: true
+  #overwrite: true
+  #on:
+   # all_branches: true
 
-#after_success:
-#- pwd
-#- mkdir $HOME/buildApk/
-#- ls -l
-#- cd $HOME/buildApk/
-#- pwd
-#- ls -l
-#- git config --global user.email "loay.saada@gmail.com"
-#- git config --global user.name "Altayeb Saadeh"
-#- git clone --depth=50 --branch=master https://github.com/altayeb1980/Demo.git
-#- cd Demo
-#- ls -l
-#/home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar
-#- cp -r /home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar $HOME/buildApk/
-#- ls -l
-#- cd $HOME/buildApk/target
-#- ls -l
-#- git add .
-#- git remote rm origin
-#- git remote add origin https://$GITHUB_TOKEN@github.com/altayeb1980/Demo.git
-#- git add .
-#- git commit -m "Travis Build $TRAVIS_BUILD_NUMBER pushed"
+after_success:
+- pwd
+- mkdir $HOME/buildApk/
+- ls -l
+- cd $HOME/buildApk/
+- pwd
+- ls -l
+- git config --global user.email "loay.saada@gmail.com"
+- git config --global user.name "Altayeb Saadeh"
+- git clone --depth=50 --branch=master https://github.com/altayeb1980/Demo.git
+- cd Demo
+- ls -l
+- cp -r /home/travis/build/altayeb1980/Demo/target $HOME/buildApk/
+- ls -l
+- git add .
+- git remote rm origin
+- git remote add origin https://$GITHUB_TOKEN@github.com/altayeb1980/Demo.git
+- git add .
+- git commit -m "Travis Build $TRAVIS_BUILD_NUMBER pushed"
 #- git push -fq origin master
  
