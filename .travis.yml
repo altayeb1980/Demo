@@ -11,10 +11,10 @@ deploy:
   file: Demo-1.0.jar
   skip_cleanup: true
   on:
-    tags: false
+    repo: altayeb1980/Demo
     branches:
-    only:
-     -release
+      only:
+       - release
 
 #after_success:
 #- pwd
