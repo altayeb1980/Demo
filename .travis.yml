@@ -11,6 +11,7 @@ deploy:
   file: Demo-1.0.jar
   skip_cleanup: true
   on:
+    tags: false
     branches:
     only:
      -release
