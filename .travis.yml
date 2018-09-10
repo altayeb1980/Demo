@@ -1,8 +1,8 @@
 language: java
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
+  provider: releases
+  api_key: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  file: /home/travis/build/altayeb1980/Demo/target/Demo-1.0.jar
+  skip_cleanup: true
   on:
     branch: master
