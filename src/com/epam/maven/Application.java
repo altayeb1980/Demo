@@ -6,6 +6,7 @@ public class Application {
 		System.out.println("hello wrodl");
 		System.out.println("what a nice country");
 		System.out.println("what a poland people ya man");
+		System.out.println("khara ww");
 	}
 
 }  
