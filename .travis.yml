@@ -16,10 +16,7 @@ deploy:
   file: Demo-1.0.jar
   skip_cleanup: true
   on:
-    repo: altayeb1980/Demo
-    branches:
-      only:
-       - master
+    all_branches: true
 
 #after_success:
 #- pwd
