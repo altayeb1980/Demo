@@ -11,7 +11,9 @@ deploy:
   file: Demo-1.0.jar
   skip_cleanup: true
   on:
-    branch: release
+    branches:
+    only:
+     -release
 
 #after_success:
 #- pwd
