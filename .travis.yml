@@ -6,5 +6,6 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    branch: master
-  
+    repo: altayeb1980/Demo
+    tags: false
+    all_branches: true
