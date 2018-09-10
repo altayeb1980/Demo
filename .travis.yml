@@ -31,7 +31,7 @@ after_success:
 - git clone --depth=50 --branch=master https://github.com/altayeb1980/Demo.git
 - cd Demo
 - ls -l
-- cp -r /home/travis/build/altayeb1980/Demo/target $HOME/buildApk/
+- cp -r /home/travis/build/altayeb1980/Demo/target $HOME/buildApk/Demo
 - ls -l
 - git add .
 - git remote rm origin
